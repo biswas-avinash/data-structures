@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//declaring stact nodes
+//declaring stack nodes
 struct node{
 	int val;
 	struct node *down;
