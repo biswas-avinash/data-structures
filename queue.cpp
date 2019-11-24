@@ -16,7 +16,7 @@ struct node *front=NULL;
 struct node *rear=NULL;
 
 //insert operation
-void insertQ(int value){
+void enQueue(int value){
 	struct node *temp;
 	temp=(struct node *)malloc(sizeof(struct node));
 	temp->val=value;
@@ -50,7 +50,7 @@ void displayQ(){
 }
 
 //delete operation
-void deleteQ(){
+void deQueue(){
 	if(front==NULL){
 		cout<<"\nQueue is empty";
 	}
@@ -73,11 +73,11 @@ int main(){
 	do{
 		cout<<"Enter value to insert : ";
 		cin>>value;
-		insertQ(value);
+		enQueue(value);
 		cout<<"Do you want to insert more (0/1) : ";
 		cin>>ch;
 	}while(ch>0);
 	displayQ();
-	deleteQ();
+	deQueue();
 	displayQ();
 }
